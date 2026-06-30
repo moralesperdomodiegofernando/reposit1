@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Purchase - Tesorería</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand"><h2><a href="dashboard.html" style="color: #38bdf8; text-decoration: none;">Smart Purchase</a></h2></div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Inicio</a></li>
+                    <li><a href="cotizacion.html"><i class="fa-solid fa-file-invoice-dollar"></i> Cotización</a></li>
+                    <li><a href="facturacion.html"><i class="fa-solid fa-receipt"></i> Facturación</a></li>
+                    <li><a href="orden_compra.html"><i class="fa-solid fa-file-contract"></i> Orden de Compra</a></li>
+                    <li><a href="facturas_compra.html"><i class="fa-solid fa-file-invoice"></i> Facturas de Compras</a></li>
+                    <li><a href="inventario.html"><i class="fa-solid fa-boxes-stacked"></i> Inventario</a></li>
+                    <li><a href="tesoreria.html" class="active"><i class="fa-solid fa-scale-balanced"></i> Tesorería</a></li>
+                    <li><a href="ajustes.html"><i class="fa-solid fa-sliders"></i> Ajustes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="btn-logout" id="btn-cerrar-sesion"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Módulo de Tesorería y Caja</h1>
+                    <p>Consulte saldos disponibles, ingresos percibidos y egresos del sistema.</p>
+                </div>
+            </header>
+
+            <section class="dashboard-cards" style="margin-bottom: 25px;">
+                <div class="card" style="border-top-color: #10b981;">
+                    <h3>Total Ingresos</h3>
+                    <p class="card-value" style="color: #10b981;">+ $15,840.00</p>
+                </div>
+                <div class="card" style="border-top-color: #ef4444;">
+                    <h3>Total Egresos</h3>
+                    <p class="card-value" style="color: #ef4444;">- $3,120.00</p>
+                </div>
+                <div class="card" style="border-top-color: #0ea5e9;">
+                    <h3>Balance Neto Disponible</h3>
+                    <p class="card-value" style="color: #0ea5e9;">$12,720.00</p>
+                </div>
+            </section>
+
+            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); max-width: 400px;">
+                <h4 style="color: #1e293b; margin-bottom: 10px;">Cierre y Arqueo</h4>
+                <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">Genere un reporte de conciliación de todas las cuentas bancarias registradas al día de hoy.</p>
+                <button class="btn-save" style="margin:0; background-color: #0ea5e9; color: white;" onclick="alert('¡Conciliación Bancaria Generada Exitosamente!')">Conciliar Cuentas</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

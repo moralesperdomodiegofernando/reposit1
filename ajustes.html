@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Purchase - Ajustes</title>
+    <link class="style" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2><a href="dashboard.html" style="color: #38bdf8; text-decoration: none;">Smart Purchase</a></h2>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Inicio</a></li>
+                    <li><a href="cotizacion.html"><i class="fa-solid fa-file-invoice-dollar"></i> Cotización</a></li>
+                    <li><a href="facturacion.html"><i class="fa-solid fa-receipt"></i> Facturación</a></li>
+                    <li><a href="orden_compra.html"><i class="fa-solid fa-file-contract"></i> Orden de Compra</a></li>
+                    <li><a href="facturas_compra.html"><i class="fa-solid fa-file-invoice"></i> Facturas de Compras</a></li>
+                    <li><a href="inventario.html"><i class="fa-solid fa-boxes-stacked"></i> Inventario</a></li>
+                    <li><a href="tesoreria.html"><i class="fa-solid fa-scale-balanced"></i> Tesorería</a></li>
+                    <li><a href="ajustes.html" class="active"><i class="fa-solid fa-sliders"></i> Ajustes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="btn-logout" id="btn-cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Configuración del Sistema</h1>
+                    <p>Personalice parámetros de la organización, impuestos de ley y perfiles de usuarios.</p>
+                </div>
+            </header>
+
+            <section class="dashboard-cards">
+                <div class="card card-ajuste" id="btn-config-empresa" style="border-top-color: #1e3c72;">
+                    <h3><i class="fa-solid fa-building"></i> Configurar Empresa</h3>
+                    <p class="card-value" id="txt-empresa-status" style="font-size: 20px; color: #475569; margin-top: 10px;">Modificar Datos</p>
+                </div>
+                <div class="card card-ajuste" id="btn-config-usuarios" style="border-top-color: #6366f1;">
+                    <h3><i class="fa-solid fa-users-gear"></i> Control de Usuarios</h3>
+                    <p class="card-value" style="font-size: 20px; color: #475569; margin-top: 10px;">2 Cuentas Activas</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modal-empresa">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Datos de la Empresa</h2>
+                <button class="close-btn" id="close-empresa">&times;</button>
+            </div>
+            <form id="form-empresa">
+                <div class="input-group">
+                    <label>Nombre Jurídico</label>
+                    <input type="text" id="empresa-nombre" placeholder="Ej. Mi Empresa S.A.S" required>
+                </div>
+                <div class="input-group">
+                    <label>Identificación Tributaria (NIT / RUT)</label>
+                    <input type="text" placeholder="000000000-0" required>
+                </div>
+                <div class="input-group">
+                    <label>Porcentaje de Impuesto (%)</label>
+                    <input type="number" placeholder="19" required>
+                </div>
+                <button type="submit" class="btn-save">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-usuarios">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Gestión de Usuarios</h2>
+                <button class="close-btn" id="close-usuarios">&times;</button>
+            </div>
+            <form id="form-usuarios">
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="juan@smartpurchase.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Rol del Sistema</label>
+                    <select class="modal-select" required>
+                        <option value="admin">Administrador</option>
+                        <option value="compras">Encargado de Compras</option>
+                        <option value="tesoreria">Tesorero</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-save" style="background-color: #6366f1; color: white;">Registrar Usuario</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

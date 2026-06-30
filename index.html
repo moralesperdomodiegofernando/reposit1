@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Purchase - Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Smart Purchase</h1>
+            <p>Bienvenido. Por favor, ingrese sus datos de acceso.</p>
+        </div>
+
+        <form id="form-login">
+            <div class="input-group">
+                <label>Usuario o Correo Electrónico</label>
+                <input type="text" id="username" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-actions">
+                <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Ingresar al Sistema</button>
+        </form>
+
+        <div class="login-footer">
+            <p>¿No tienes una cuenta? <a href="#">Solicita acceso aquí</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

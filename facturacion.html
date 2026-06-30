@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Purchase - Facturación</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand"><h2><a href="dashboard.html" style="color: #38bdf8; text-decoration: none;">Smart Purchase</a></h2></div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Inicio</a></li>
+                    <li><a href="cotizacion.html"><i class="fa-solid fa-file-invoice-dollar"></i> Cotización</a></li>
+                    <li><a href="facturacion.html" class="active"><i class="fa-solid fa-receipt"></i> Facturación</a></li>
+                    <li><a href="orden_compra.html"><i class="fa-solid fa-file-contract"></i> Orden de Compra</a></li>
+                    <li><a href="facturas_compra.html"><i class="fa-solid fa-file-invoice"></i> Facturas de Compras</a></li>
+                    <li><a href="inventario.html"><i class="fa-solid fa-boxes-stacked"></i> Inventario</a></li>
+                    <li><a href="tesoreria.html"><i class="fa-solid fa-scale-balanced"></i> Tesorería</a></li>
+                    <li><a href="ajustes.html"><i class="fa-solid fa-sliders"></i> Ajustes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="btn-logout" id="btn-cerrar-sesion"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Módulo de Facturación Electrónica</h1>
+                    <p>Registre ventas directas y emita comprobantes autorizados.</p>
+                </div>
+            </header>
+
+            <section class="dashboard-cards" style="margin-bottom: 25px;">
+                <div class="card" style="border-top-color: #10b981;">
+                    <h3>Ventas del Día</h3>
+                    <p class="card-value" style="color: #10b981;">$4,250.00</p>
+                </div>
+                <div class="card" style="border-top-color: #3b82f6;">
+                    <h3>Facturas Emitidas</h3>
+                    <p class="card-value">18 Hoy</p>
+                </div>
+            </section>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); max-width: 600px;">
+                <h3 style="margin-bottom: 15px; color: #1e293b;"><i class="fa-solid fa-cart-plus"></i> Registrar Nueva Venta Directa</h3>
+                <form id="form-factura">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="input-group">
+                            <label>Método de Pago</label>
+                            <select class="modal-select" required>
+                                <option value="efectivo">Efectivo</option>
+                                <option value="transferencia">Transferencia Bancaria</option>
+                                <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Monto a Cobrar ($)</label>
+                            <input type="number" placeholder="0.00" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-save" style="background-color: #10b981; color: white;">Emitir Comprobante y Cobrar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* ==========================================================================
+   1. RESETEO GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   2. ESTILOS EXCLUSIVOS DE LA PANTALLA DE LOGIN
+   ========================================================================== */
+.login-body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #1e3c72;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.form-actions {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password, .login-footer a {
+    color: #2a5298;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgot-password:hover, .login-footer a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: #2a5298;
+}
+
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA INTERNA DEL PANEL (DASHBOARD Y MÓDULOS)
+   ========================================================================== */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* BARRA LATERAL (SIDEBAR) */
+.sidebar {
+    width: 260px;
+    background-color: #1e293b; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    padding: 24px;
+    text-align: center;
+    background-color: #0f172a;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a i {
+    margin-right: 12px;
+    width: 20px;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover, .sidebar-menu li a.active {
+    color: #ffffff;
+    background-color: #334155;
+    border-left: 4px solid #38bdf8;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #334155;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #ef4444; 
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626;
+}
+
+/* CONTENIDO DE MÓDULOS */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.welcome-text h1 {
+    color: #1e293b;
+    font-size: 26px;
+}
+
+.welcome-text p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* TARJETAS */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #1e3c72;
+}
+
+.card h3 {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.card-ajuste {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-ajuste:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input, .modal-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   4. VENTANAS MODALES EMERGENTES
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.btn-save {
+    width: 100%;
+    padding: 12px;
+    background-color: #38bdf8;
+    color: #1e293b;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #0ea5e9;
+    color: white;
+}
